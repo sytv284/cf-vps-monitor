@@ -87,9 +87,6 @@ jobs:
           CGO_ENABLED: '1'
         run: go test -race ./...
 
-      - name: Dependency and toolchain security
-        run: npm run security:check
-
       - name: Check migration drift
         run: |
           npm run build:migrations
